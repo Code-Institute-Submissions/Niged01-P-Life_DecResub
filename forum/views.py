@@ -2,7 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
+from django.contrib.auth.decorators import login_required
 
 
 class PostList(generic.ListView):
@@ -75,3 +76,22 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+@login_required
+def create_post(request):
+    context = {}
+    form = PostForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            print("\n\n its valid")
+            author = Author.objects.get(user=request.user)
+            new_post = form.save(commit=False)
+            new_post.user = author
+            new_post.save()
+            form.save_m2m()
+            return redirect("home")
+    context.update({
+        "form": form,
+        "title": "OZONE: Create New Post"
+    })
+    return render(request, "create_post.html", context)
