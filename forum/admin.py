@@ -1,7 +1,11 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Category, Author, Post, Comment, Reply
 from django_summernote.admin import SummernoteModelAdmin
 
+
+admin.site.register(Category)
+admin.site.register(Author)
+admin.site.register(Reply)
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):

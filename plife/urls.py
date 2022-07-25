@@ -21,4 +21,6 @@ urlpatterns = [
     path("", include("forum.urls"), name="forum-urls"),
     path("account/", include("register.urls"), name="register-urls"),
     path('summernote/', include('django_summernote.urls')),
+    path('tinymce/', include('tinymce.urls')),
+    path('hitcount/', include('hitcount.urls', namespace='hitcount')),
 ]

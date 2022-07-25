@@ -50,6 +50,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'forum',
     'register',
+    'tinymce',
+    'hitcount',
+    'taggit',
 ]
 
 SITE_ID = 1
