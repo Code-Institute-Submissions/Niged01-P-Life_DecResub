@@ -77,7 +77,8 @@ class Post(models.Model):
     categories = models.ManyToManyField(Category)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
+    hit_count_generic = GenericRelation(
+        HitCount, object_id_field='object_pk',
         related_query_name='hit_count_generic_relation'
     )
     tags = TaggableManager()
