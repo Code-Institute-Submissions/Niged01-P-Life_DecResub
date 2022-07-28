@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block content %}
+{% load hitcount_tags %}
 {% load crispy_forms_tags %}
 
 <div class="masthead">
@@ -10,7 +11,7 @@
                 <!-- Profile pic goes here-->
                 <img src="{{post.user.profile_pic.url}}" alt="">
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }} Read {% get_hit_count for post %} Times.</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
@@ -89,11 +90,20 @@
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
+                <!--Reply Area-->
+                <form action="." method="post">
+                    {% csrf_token %}
+                    <div class="comment-area hide" id="comment{{comment.id}}">
+                        <textarea name="reply" id="" placeholder="reply here ... "></textarea>
+                        <input type="submit" value="submit" name="reply-form">
+                        <input type="hidden" name="comment-id" value="{{comment.id}}">
+                    </div>
+                </form>
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- For later -->
+                <!-- Write comment and approval -->
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval
@@ -111,6 +121,24 @@
                 {% endif %}
                 {% endif %}
             </div>
+            <!--Reply section-->
+            {% for reply in comment.replies.all %}
+            <div class="comments-container" style="width: 95%; margin-left:5%;">
+                <div class="body">
+                    <div class="authors">
+                        <div class="username"><a href="">{{reply.user.fullname|title}}</a></div>
+                        <div>Role</div>
+                        <img src="{{reply.user.profile_pic.url}}" alt="">
+                        <div>Posts: <u>{{reply.user.num_posts}}</u></div>
+                        <div>Points: <u>{{reply.user.points}}</u></div>
+                    </div>
+                    <div class="content">
+                        {{reply.content}}
+                        <br>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Author, Category, Post
+from .utils import update_views
 from .forms import CommentForm, PostForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
@@ -57,6 +58,8 @@ class PostDetail(View):
             comment.save()
         else:
             comment_form = CommentForm()
+        
+        update_views(request, post)
 
         return render(
             request,
@@ -96,6 +99,6 @@ def create_post(request):
             return redirect("home")
     context.update({
         "form": form,
-        "title": "OZONE: Create New Post"
+        "title": "PLife: Create New Post"
     })
     return render(request, "create_post.html", context)
