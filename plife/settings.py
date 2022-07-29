@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'tinymce',
     'hitcount',
     'taggit',
+    
 ]
 
 SITE_ID = 1
