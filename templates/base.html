@@ -18,7 +18,7 @@
     </script>
     <script src="https://kit.fontawesome.com/6550d07184.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
     
 
 </head>
@@ -29,11 +29,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">P<span class="blue-dash">-</span>Life</span><i class="fa-solid fa-plane-departure"></i></span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">P<span class="blue-dash">-</span>Life</span></span></a>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -52,12 +48,12 @@
                     </li>
                     {% endif %}
                 </ul>
-                {% if user.is_authenticated %}
-                <div class="plus" style="font-size:50px;font-weight300px;margin-left:200px;"><a href="{% url 'create_post' %}">+</a></div>
-                {% endif %}
-                <span class="navbar-text text-muted">
+                <span class="navbar-text">
                     Pilots taking to the skies!
                 </span>
+                {% if user.is_authenticated %}
+                <div><a class="plus" href="{% url 'create_post' %}">+</a></div>
+                {% endif %}
             </div>
         </div>
     </nav>

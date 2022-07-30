@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Author, Category, Post
@@ -93,10 +93,10 @@ def create_post(request):
             print("\n\n its valid")
             author = Author.objects.get(user=request.user)
             new_post = form.save(commit=False)
-            new_post.user = author
+            new_post.author = author
             new_post.save()
             form.save_m2m()
-            return redirect("home")
+            return HttpResponseRedirect(reverse('home'))
     context.update({
         "form": form,
         "title": "PLife: Create New Post"
