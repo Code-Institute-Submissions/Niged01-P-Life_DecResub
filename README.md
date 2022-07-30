@@ -48,6 +48,127 @@ and came accross this palette that fits perfectly with what I had envisioned. I 
 
 - I used sans-serif for it's simplicity clean lines and legiability.
 
+### Existing Features
+- **Landing Page**
+    - The Landing page has posts content for easy viewing, the user can signup or sign in from this page The page has a navigation bar,
+    with the logo that will take you back to the home page, posts the user can click on to read and read comments.
+    When a user is not logged in there is a register button, and a Login button. On the tablet and mobile sizes the navigation bar collapses to a burger menu. There is a footer across the bottom of every page to indicate the end of the page.
+
+    ![Home page when user is not logged in](./assets/documentation/homepage-loggedout.png)
+    
+- **post-details Page**
+    - This page is accessible to any user.
+    - When the user is not logged in the can view the title, author, content of blog, time and date created, the number of likes and comments, and the comments made by others.
+
+    ![blog details not logged in](./assets/documentation/site-blogdetails-notloggedin.png)
+
+    - when the user is logged in they can view the same as other users but they have the ability to like a post, and to comment on the post.
+
+    ![blog details logged in](./assets/documentation/site-detailloggedin.png)
+
+- **Register page**
+    - Users can register for their own account.
+    - A registered user has access to more features such as liking and commenting on existing posts as well as publishing  and managing (edit/delete)their own blogs.
+
+    ![Register page](./assets/documentation/site-registerpage.png)
+
+
+- **User Account/ Profile Page**
+    - Once the user is registered and logged in they have a user profile page.
+    - On the profile they can add their full name a bio and profile image
+
+    ![profile page](./assets/documentation/site-accountpage.png)
+
+- **Publish page**
+    - This page is where the user can publish their own page.
+    - Once approved the published blog will appear in the blog page.
+
+    ![publish blog](./assets/documentation/site-publishblog.png)
+
+
+- **Comments**
+- Throughout the site there is comments that is displayed so a user knows things have happened like logging out, or form submitted to admin.
+
+![comment](./assets/documentation/comment-spu.png)
+
+### Future Features
+- The ability to sign in with social accounts like Facebook, Google etc.
+- The ability to mange contributors account change profile image delete posts etc.
+- Members can save blogs they like for easy access in the future.
+- The ability to tag other members in posts.
+- The ability to follow other users.
+- Include a forgotten password function to change or reset password.
+- Create a search bar to search for blogs containing a specific word or phrase.
+- Logout feature to ask if the user acctually wants to log out
+
+### Frameworks, Libraries & Tools Used
+- Git 
+    - For version control, committing and pushing to GitHub
+- GitHub
+    - For storing the repository, files and images pushed from Gitpod
+- Gitpod
+    - IDE used to code my project
+- Heroku
+    - Used to deploy the application
+- Bootstrap
+    - Used for grids, layout, columns, cards and forms structure
+- Django
+    - Used for django frameworks to manage the apps
+- Google Fonts
+    - Used for the fonts on the site
+- Fontawesome
+    - Used for the additional icons
+- Coolors
+    - Used for the colour scheme on the site
+- PostgreSQL
+    - Used for the database storage of the models
+- Cloudinary
+    - Used for image and static files
+- AmIResponsive
+    - used for the responsiveness of the site
+- Lighthouse
+    - Used for testing site functionality
+- W3C Markup Validation Service
+    - Used for HTML testing
+- W3C CSS Validation Service
+    - Used for CSS testing
+- PEP8
+    - Used for Python testing files
+
+### Resources
+- Code institute's Codestar Django Blog walktrough project, was used for the beginning development of my project,as it was the first time using the Django framework, It was very helpful for the initial setup.
+- I used the **Django documentation** to make sure I was heading in the right direction, and it helped with the configuration of my email settings on my registartion form.
+- Google for sorting out problems or to check my understanding.
+- stack overflow to fix reported bug
+- Code Institute's slack community for bug knowledge and general questions.
+- Chrome Developer Tools for tweaking styling ennsureing completeness.
+    
+## Testing
+- *Unit testing*, *Validator testing* and *User story testing* can all be found [here](/TESTING.md)
+## Fixed Bugs
+- The bugs can be seen documented in my kanban development board in their own column [here](https://github.com/Mrst12/step-parents-unite/projects/1)
+
+- Heroku initial deployment
+    - I had an issue where I couldnt do a deployment to Heroku, it was not recognising the projects name.
+        - It was fixed by changing the filename in the Procfile from what I had put p-life-01 to what it should of been plife. It was then deployed to Heroku.
+- Submit not redirecting
+    - When a user wanted to comment on a blog they fill in the body and then click submit, this was redirecting to a page saying "This page is not working, contact the owner, error 405"
+        - To fix it I did a google search on error 405, which gave me an idea the problem was in my views.py file,
+        I had an indented block of code, the clue came from the problems tab on the terminal, sorted the indentation and the submit worked as it should.
+- White gap on footer
+    - My footer was not stretching across the whole page I had a white gap on the left hand side.
+        - Used developer tools to investigate the problem and found I had added a margin to the body which was causing the issue, restyled and it looked as it should.
+- Only one post on my blog page
+    - On my manage blog page it was only ever showing the last post that was put there.
+        Went through the blog file line by line to see if I could establish the problem, and found I had missed off a closing div element, added it in and the problem was resolved.
+- Trailing whitespace
+    - When doing the PEP8 testing on my views.py file I found [this error](./assets/documentation/pep8-views.py-bug.png)
+        - Did a google search for the problem and came up with [this article](stackoverflow.com/questions/21410075/what-is-trailing-whitespace-and-how-can-i-handle-this) implemented the changes and the error was gone.
+
+## Known bugs
+- Mobile menu bar not rendering 
+- Post image or place holder image not rendering
+
 ## Technologies used
 - HTML
 - CSS
