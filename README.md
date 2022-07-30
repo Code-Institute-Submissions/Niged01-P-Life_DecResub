@@ -1,108 +1,172 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# P-Life
 
-Welcome Niged01,
+[To view live site click here](https://p-life-01.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction
+P-life is a forum that has been created for Pilots to get togehter and discuss everything piloting.
+Being a pilot out on the road can get lonely, creating this community in theory should make it easier for 
+Pilots to get information easier and gain friendships along the way. It is a forum for newby Pilots and those more experienced.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+insert responsive image here later-----
 
-## Gitpod Reminders
+## Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## The User Experience 
+- The approach I have taken to the design of this forum, is clear simplicity with image detail for reference and easy navigation.
+- The progress of The User Experienve stories can be viewd [here.](tba)
 
-Another blue button should appear to click: _Open Browser_.
+### Admin
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- As Site Admin, I can approve or disapprove forum posts and comments so that I can filter out objectionable Content.
+- As Site Admin I can create, post, edit or delete forum posts so that I can share and manage my forum posts.
+- As Site Admin I can have all the functionality of a member user so that I can be involved with the forum site.
 
-A blue button should appear to click: _Make Public_,
+### General User
 
-Another blue button should appear to click: _Open Browser_.
+- As a general user, I can view a list of forum topics so that I can select one to read.
+- As a general user, I can click on a post so that I can read the enitre post.
+- As a general user, I can view the number of likes on a posts, to see which is most popular.
+- As a general user, I can view comments on individual posts enabling viewing of the full conversation.
+- As a general user, I can register for an account to take full contributor site usage.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Contributor user
 
-To log into the Heroku toolbelt CLI:
+- As a contributor user, I can create, posts and add an image.
+- As a contributor user, I can like/unlike blogs so that I can interact with the content.
+- As a contributor user, I can leave comments on forum posts, so that the user can be involved with the conversation.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Colour Scheme
+I instantly had an idea of sky and aviation colors for the forum site palette. With that in mind I reseached images online
+and came accross this palette that fits perfectly with what I had envisioned. I have used this accross the Typography aswell.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Colour scheme used for site](./assets/documentation/colorpalette.webp)
 
-------
 
-## Release History
+### Typography
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- I used sans-serif for it's simplicity clean lines and legiability.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Technologies used
+- HTML
+- CSS
+- JavaScript
+- Python/Django
+    - The below modules were used for the development of the project.
+        *   asgiref==3.5.2
+        *   asgiref==3.5.2
+        *   cloudinary==1.29.0
+        *   dj-database-url==0.5.0
+        *   dj3-cloudinary-storage==0.0.6
+        *   Django==3.2.14
+        *   django-allauth==0.51.0
+        *   django-crispy-forms==1.14.0
+        *   django-etc==1.3.1
+        *   django-hitcount==1.3.5
+        *   django-resized==1.0.1
+        *   django-summernote==0.8.20.0
+        *   django-taggit==3.0.0
+        *   django-tinymce==3.4.0
+        *   gunicorn==20.1.0
+        *   oauthlib==3.2.0
+        *   Pillow==9.2.0
+        *   psycopg2==2.9.3
+        *   PyJWT==2.4.0
+        *   python3-openid==3.2.0
+        *   pytz==2022.1
+        *   requests-oauthlib==1.3.1
+        *   sqlparse==0.4.2
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Deployment
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Initial deployment was made early on in the process of making this project to avoid any unforseen errors when deploying and causing stress if time was limited.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Deployment through Heroku
+1. Sign up / Log in to Heroku
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+2. From the main Heroku Dashboard page select 'New' and then 'Create New App'
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+3. Give the project a name and select a suitable region, then select create app. The name for the app must be unique. This will create the app within Heroku and bring you to the deploy tab. From the submenu at the top, navigate to the resources tab.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+4. Add the database to the app, in the add-ons section search for 'Heroku Postgres', select the package that appears and add 'Heroku Postgres' as the database
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+5. Navigate to the setting tab, within the config vars section copy the DATABASE_URL to the clipboard for use in the Django configuration.
 
-------
+6. Within the django app repository create a new file called env.py - within this file import the os library and set the environment variable for the DATABASE_URL pasting in the address copied from Heroku. The line should appear as os.environ["DATABASE_URL"]= "Paste the link in here"
 
-## FAQ about the uptime script
+7. Add a secret key to the app using os.environ["SECRET_KEY"] = "your secret key goes here"
+Add the secret key just created to the Heroku Config Vars as SECRET_KEY for the KEY value and the secret key value you created as the VALUE
 
-**Why have you added this script?**
+8. In the settings.py file within the django app, import Path from pathlib, import os and import dj_database_url
+insert the line if os.path.isfile("env.py"): import env
+remove the insecure secret key that django has in the settings file by default and replace it with SECRET_KEY = os.environ.get('SECRET_KEY')
+replace the databases section with DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))} ensure the correct indentation for python is used.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+9. In the terminal migrate the models over to the new database connection
+Navigate in a browser to cloudinary, log in, or create an account and log in.
 
-**How will this affect me?**
+10. From the dashboard - copy the CLOUDINARY_URL to the clipboard
+in the env.py file created earlier - add os.environ["CLOUDINARY_URL"] = "paste in the Url copied to the clipboard here"
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+11. In Heroku, add the CLOUDINARY_URL and value copied to the clipboard to the config vars
+Also add the KEY - DISABLE_COLLECTSTATIC with the Value - 1 to the config vars
+this key value pair must be removed prior to final deployment
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+12. Add the cloudinary libraries to the list of installed apps, the order they are inserted is important, 'cloudinary_storage' goes above 'django.contrib.staticfiles' and 'cloudinary' goes below it.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+13. In the Settings.py file - add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
+Link the file to the templates directory in Heroku TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-**So….?**
+14. Change the templates directory to TEMPLATES_DIR - 'DIRS': [TEMPLATES_DIR]
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+15. Add Heroku to the ALLOWED_HOSTS list the format will be the app name given in Heroku when creating the app followed by .herokuapp.com
 
-**Can I opt out?**
+16. In your code editor, create three new top level folders, media, static, templates
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+17. Create a new file on the top level directory - Procfile
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+18. Within the Procfile add the code - web: guincorn PROJECT_NAME.wsgi
 
-**Anything more?**
+19. In the terminal, add the changed files, commit and push to GitHub
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+20. In Heroku, navigate to the deployment tab and deploy the branch manually - watch the build logs for any errors.
 
----
+Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
 
-Happy coding!
+### Forking the Gihub Repository
+
+1. By forking the GitHub Repository, you will be able to make a copy of the original repository on your own GitHub account, allowing you to view and/or make changes without affecting the original repository by using the following steps:
+
+2. Log in to GitHub and locate the GitHub Repository At the top of the Repository (not top of page), just above the "Settings" button on the menu, locate the "Fork" button. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the GitHub Repository Under the repository name.
+
+2. Click "Clone or download". 
+
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link. 
+
+4. Open Git Bash.  
+
+5. Change the current working directory to the location where you want the cloned directory to be made. 
+
+6. Type git clone, and then paste the URL you copied in Step 3.
+
+## Credits
+- Code institute's Django blog walkthrough, was my initial confidence booster as that was the first time I had encountered the Django framework, so the walkthrough was used to  help guide me through the initial setup.
+- Youtube forum tutorial found [here](https://www.youtube.com/watch?v=YXmsi13cMhw)
+- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/configuration.html) configuration of the email in the registration form.
+- iColorPalette for the color [Palette](./assets/documentation/colorpalette.webp)
+
+### Acknowledgements
+- Code institute for course material and content.
+- The slack community for their help and support.
+- My mentor for advise and assistance on planning and submission feedback.
