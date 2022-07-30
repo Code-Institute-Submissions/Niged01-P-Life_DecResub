@@ -1,1 +1,1 @@
-web: gunicorn p-life-01.wsgi
+web: gunicorn plife.wsgi
