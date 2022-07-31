@@ -54,42 +54,42 @@ and came accross this palette that fits perfectly with what I had envisioned. I 
     with the logo that will take you back to the home page, posts the user can click on to read and read comments.
     When a user is not logged in there is a register button, and a Login button. On the tablet and mobile sizes the navigation bar collapses to a burger menu. There is a footer across the bottom of every page to indicate the end of the page.
 
-    ![Home page when user is not logged in](./assets/documentation/homepage-loggedout.png)
+    ![Landing Page]()
     
 - **post-details Page**
     - This page is accessible to any user.
     - When the user is not logged in the can view the title, author, content of blog, time and date created, the number of likes and comments, and the comments made by others.
 
-    ![blog details not logged in](./assets/documentation/site-blogdetails-notloggedin.png)
+    ![blog details not logged in]()
 
     - when the user is logged in they can view the same as other users but they have the ability to like a post, and to comment on the post.
 
-    ![blog details logged in](./assets/documentation/site-detailloggedin.png)
+    ![blog details logged in]()
 
 - **Register page**
     - Users can register for their own account.
     - A registered user has access to more features such as liking and commenting on existing posts as well as publishing  and managing (edit/delete)their own blogs.
 
-    ![Register page](./assets/documentation/site-registerpage.png)
+    ![Register page]()
 
 
 - **User Account/ Profile Page**
     - Once the user is registered and logged in they have a user profile page.
     - On the profile they can add their full name a bio and profile image
 
-    ![profile page](./assets/documentation/site-accountpage.png)
+    ![profile page]()
 
 - **Publish page**
     - This page is where the user can publish their own page.
     - Once approved the published blog will appear in the blog page.
 
-    ![publish blog](./assets/documentation/site-publishblog.png)
+    ![publish blog]()
 
 
 - **Comments**
 - Throughout the site there is comments that is displayed so a user knows things have happened like logging out, or form submitted to admin.
 
-![comment](./assets/documentation/comment-spu.png)
+![comment]()
 
 ### Future Features
 - The ability to sign in with social accounts like Facebook, Google etc.
@@ -146,7 +146,6 @@ and came accross this palette that fits perfectly with what I had envisioned. I 
 ## Testing
 - *Unit testing*, *Validator testing* and *User story testing* can all be found [here](/TESTING.md)
 ## Fixed Bugs
-- The bugs can be seen documented in my kanban development board in their own column [here](https://github.com/Mrst12/step-parents-unite/projects/1)
 
 - Heroku initial deployment
     - I had an issue where I couldnt do a deployment to Heroku, it was not recognising the projects name.

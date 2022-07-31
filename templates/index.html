@@ -16,7 +16,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="../media/josue-isai-ramos-figueroa-n2NBgIx3A28-unsplash.jpg">
+                                    src="{% static, media/images/plane.jpg}">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
