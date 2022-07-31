@@ -9,7 +9,29 @@ Pilots to get information easier and gain friendships along the way. It is a for
 
 insert responsive image here later-----
 
-## Contents
+## Contents 
+- [User Experience](#user-experience)
+    - [Admin](#admin)
+    - [General User](#general-user)
+    - [Member User](#member-user)
+- [Design](#design)
+    - [Wireframes](#wireframes)
+    - [Flowcharts](#flowcharts)
+    - [Database models](#database-models)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Future Features](#future-features)
+- [Technologies used](#technologies-used)
+    - [Frameworks, Libraries & Tools Used](#frameworks-libraries--tools-used)
+    - [Resources](#resources)
+- [Testing](#testing)
+- [ Fixed Bugs](#fixed-bugs)
+- [Known Bugs](#known-bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+    - [Acknowledgements](#acknowledgements)
 
 
 

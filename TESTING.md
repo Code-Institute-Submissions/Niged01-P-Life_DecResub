@@ -73,133 +73,96 @@ Result:
 
 - Home page
 
-![home page HTML test](./assets/documentation/html-indexpage.png)
+![home page HTML test](./assets/documentation/w3chome.png)
 
-- Blog page
+- Post detail page
+    - These errors are not effecting the code running ablitiy and I ran out to time to ammend these errors.
 
-![blog page HTML test](./assets/documentation/html-blogpage.png)
+![Post Details page HTML test](./assets/documentation/w3cpost.png)
 
-- Blog detail page
-
-![blog-detail page HTML test](./assets/documentation/html-blogdetail-page.png)
 
 - Register Page
+   - This error is not effecting the code running ablitiy and I ran out to time to ammend these errors.
 
-![register page HTML test](./assets/documentation/html-registerpage.png)
+![register page HTML test](./assets/documentation/w3cregister.png)
 
 - Login Page
 
-![login page HTML test](./assets/documentation/html-loginpage.png)
+![login page HTML test](./assets/documentation/w3clogin.png)
 
-- My Blogs Page
+- Create Post Page
+    - The test validator would not allow me to run the url from the web page directly had to use direct source code, These I believe 
+      are not real issues. 
 
-![My blogs page HTML test](./assets/documentation/html-myblogspage.png)
+![Create Posts page HTML test](./assets/documentation/w3ccreatepost.png)
 
 - Profile page
+   - The test validator would not allow me to run the url from the web page directly had to use direct source code, These I believe 
+      are not real issues.
+![Profile page HTML test](./assets/documentation/w3cupdate.png)
 
-![Profile page HTML test](./assets/documentation/html-profilepage.png)
-
-- Publish page
-
-![publish page HTML test](./assets/documentation/html-publishpage.png)
 
 ### W3C CSS Validation
 
 - No errors or warnings found
 
-![Css validation test](./assets/documentation/css-check.png)
+![Css validation test](./assets/documentation/w3ccss.png)
 
 ### PEP8 validation
-- There was only one error found in the views, documented it in the bugs section on the Readme document. It was resolved and then passed the tests.
+- There are a few errors around spacing and I ran out of time to amend these. they however do not effect the running code.
 
 - Unit testing for forms
 
-![unit testing for forms](./assets/documentation/unittest-forms.png)
+![unit testing for forms](./assets/documentation/pep8form.png)
 
 - Unit testing for views
 
-![Unit testing for views](./assets/documentation/unittest-views.png)
+![Unit testing for views](./assets/documentation/pep8views.png)
 
-- blog app urls
+- forum app urls
 
-![blog app urls](./assets/documentation/blogapp-urls.png)
+![blog app urls](./assets/documentation/pep8forumurls.png)
 
 - admin.py
 
-![admin.py pep8](./assets/documentation/pep8-admin.py.png)
-
-- apps.py
-
-![apps.py pep8](./assets/documentation/pep8-apps.py.png)
-
-- asgi.py
-
-![asgi.py pep8](./assets/documentation/pep8-asgi.py.png)
-
-- forms.py
-
-![forms.py pep8](./assets/documentation/pep8-forms.py.png)
+![admin.py pep8](./assets/documentation/pep8admin.png)
 
 - models.py
 
-![models.py pep8](./assets/documentation/pep8-models.py.png)
+![models.py pep8](./assets/documentation/pep8models.png)
 
-- project url.py
-
-![project url pep8](./assets/documentation/pep8-projecturl.png)
-
-- views.py bug
-
-![views.py bug pep8](./assets/documentation/pep8-views.py-bug.png)
-
-- views.py resolved
-
-![views.py resolved pep8](./assets/documentation/pep8-views.py.png)
-
-- wsgi.py
-
-![wsgi.py pep8](./assets/documentation/pep8-wsgi.py.png)
 
 ## User Story Testing
 
 ### Admin
 - As Site Admin, I can approve/disapprove blogs and comments so that I can filter out objectionable Content.
 
-![admin approve](./assets/documentation/admin-authorize.png)
+![admin approve](./assets/documentation/adminposts.png)
 
 - As Site Admin I can create, post, edit or delete blogs so that I can share and manage my blogs.
 - As Site Admin I can have all the functionality of a member user so that I can be involved with the blog site.
 
-![admin site](./assets/documentation/admin-view.png)
+![admin site](./assets/documentation/adminhome.png)
 
 ### General User
 
 - As a general user, I can view a list of blogs so that I can select one to read.
 
-![blog page](./assets/documentation/site-blogpage.png)
+![Forum page](./assets/documentation/homepage.png)
 
 - As a general user, I can click on a blog so that I can read the whole blog.
 - As a general user, I can view the number of likes on a blog, so that I can see which is most popular.
 - As a general user, I can view comments on individual blogs so I can read the full conversation.
 
-![blog-detail page](./assets/documentation/site-blogdetails-notloggedin.png)
-
 - As a general user, I can register for an account to take full member user benefits.
-
-![register page](./assets/documentation/site-registerpage.png)
 
 ### Member User
 
 - As a member user, I can create, post, edit or delete blogs so that I can share and manage my blogs.
 
-![manage blogs](./assets/documentation/site-manageblogs.png)
-
-![publish blog](./assets/documentation/site-publishblog.png)
 
 - As a member user, I can like/unlike blogs so that I can interact with the content.
 - As a member user, I can leave comments on a blog, so that I can be involved with the conversation.
-
-![blog detail page](./assets/documentation/site-detailloggedin.png)
 
 ## Final testing
 - All pages have been tested on desktop, tablet, and mobile, links and buttons have been tested and appear satisfactory.
