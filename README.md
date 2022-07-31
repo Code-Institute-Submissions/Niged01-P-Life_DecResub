@@ -100,6 +100,7 @@ and came accross this palette that fits perfectly with what I had envisioned. I 
 - The ability to mange contributors account change profile image delete posts etc.
 - Members can save blogs they like for easy access in the future.
 - The ability to tag other members in posts.
+- The ability to reply to comments on posts.
 - The ability to follow other users.
 - Include a forgotten password function to change or reset password.
 - Create a search bar to search for blogs containing a specific word or phrase.
@@ -154,23 +155,14 @@ and came accross this palette that fits perfectly with what I had envisioned. I 
 - Heroku initial deployment
     - I had an issue where I couldnt do a deployment to Heroku, it was not recognising the projects name.
         - It was fixed by changing the filename in the Procfile from what I had put p-life-01 to what it should of been plife. It was then deployed to Heroku.
-- Submit not redirecting
-    - When a user wanted to comment on a blog they fill in the body and then click submit, this was redirecting to a page saying "This page is not working, contact the owner, error 405"
-        - To fix it I did a google search on error 405, which gave me an idea the problem was in my views.py file,
-        I had an indented block of code, the clue came from the problems tab on the terminal, sorted the indentation and the submit worked as it should.
-- White gap on footer
-    - My footer was not stretching across the whole page I had a white gap on the left hand side.
-        - Used developer tools to investigate the problem and found I had added a margin to the body which was causing the issue, restyled and it looked as it should.
-- Only one post on my blog page
-    - On my manage blog page it was only ever showing the last post that was put there.
-        Went through the blog file line by line to see if I could establish the problem, and found I had missed off a closing div element, added it in and the problem was resolved.
-- Trailing whitespace
-    - When doing the PEP8 testing on my views.py file I found [this error](./assets/documentation/pep8-views.py-bug.png)
-        - Did a google search for the problem and came up with [this article](stackoverflow.com/questions/21410075/what-is-trailing-whitespace-and-how-can-i-handle-this) implemented the changes and the error was gone.
+- Css not rendering
+    - When I deployed the css was not rendering, this was sorted by moving the file to inside the static file 
+- Place holder image
+   - The place holder image was not rendering this was because the media file it was in was not in the static moved to that location 
 
 ## Known bugs
 - Mobile menu bar not rendering 
-- Post image or place holder image not rendering
+- on the login field the red waring pops up imediatetly would like this to only render if incorrect details are put in
 
 ## Technologies used
 - HTML
