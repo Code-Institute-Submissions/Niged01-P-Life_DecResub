@@ -159,6 +159,8 @@ and came accross this palette that fits perfectly with what I had envisioned. I 
     - When I deployed the css was not rendering, this was sorted by moving the file to inside the static file 
 - Place holder image
    - The place holder image was not rendering this was because the media file it was in was not in the static moved to that location 
+- Post Image not rendering
+   - This was because I had media file inside forum and not on the top level once this was moved everything worked.
 
 ## Known bugs
 - Mobile menu bar not rendering 
