@@ -4,11 +4,16 @@ from django.http import HttpResponseRedirect
 from .models import Author, Category, Post
 from .utils import update_views
 from .forms import CommentForm, PostForm
+from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 
 
+def index(request):
+    """ home page view """
+
+    return render(request, 'index.html')
 
 
 class PostList(generic.ListView):
@@ -16,6 +21,46 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
+
+
+def profile(request):
+    """ profile page view """
+    return render(request, 'profile.html')
+
+    
+def my_posts(request):
+    """ authenticated user can view their own blogs """
+
+    logged_in_user = request.user
+    logged_in_user_posts = Post.objects.filter(author=logged_in_user)
+    return render(request, 'my_posts.html', {'posts': logged_in_user_posts})
+
+
+def edit_post(request, post_id):
+    """ users that are authenticated can edit their own post """
+    post = get_object_or_404(Post, id=post_id)
+    if request.method == 'POST':
+        post_form = PostForm(request.POST, instance=post)
+        if post_form.is_valid():
+            form = post_form.save(commit=False)
+            form.approved = False
+            messages.success(
+                request,
+                'Updated post has been successfully submitted for approval'
+            )
+            form.save()
+            return redirect('my_posts')
+    post_form = PostForm(instance=post)
+    context = {'post_form': post_form}
+    return render(request, 'edit_posts.html', context)
+
+   
+def delete_post(request, post_id):
+    """ Authenticated users can delete their own posts"""
+    post = get_object_or_404(Post, id=post_id)
+    post.delete()
+    messages.success(request, 'Post deleted!')
+    return redirect('post')
 
 
 class PostDetail(View):
@@ -72,6 +117,8 @@ class PostDetail(View):
                 "liked": liked
             },
         )
+
+
 
 class PostLike(View):
     

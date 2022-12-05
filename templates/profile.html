@@ -1,0 +1,27 @@
+<!--profilepage-->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row profile">
+        <p>Welcome to P-Life {{ user.username }}</p>
+        <p>This is your page to decide what to do with your posts</p>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <ul class="ms-auto w-100">
+            <li class="profile-item">
+                <a class="btn btn-signup btn-lg profile-item-link" href="{% url 'publish' %}">Publish your posts</a>
+            </li>
+            <li class="profile-item">
+                <a class="btn btn-signup btn-lg profile-item-link" href="{% url 'my_posts' %}">Manage your posts</a>
+            </li>
+            <li class="profile-item">
+                <button type="button" class="btn btn-signup btn-lg btn-link" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{%  endblock%}
