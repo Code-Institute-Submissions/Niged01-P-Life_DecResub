@@ -58,7 +58,7 @@ def delete_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     post.delete()
     messages.success(request, 'Post deleted!')
-    return redirect('post')
+    return redirect('my_posts')
 
 
 class PostDetail(View):
