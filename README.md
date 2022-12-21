@@ -34,7 +34,7 @@ insert responsive image here later-----
 
 ## The User Experience 
 - The approach I have taken to the design of this forum, is clear simplicity with image detail for reference and easy navigation.
-- The progress of The User Experienve stories can be viewd [here.](tba)
+- The progress of The User Experienve stories can be viewd [here.](https://github.com/users/Niged01/projects/8/views/1)
 
 ### Admin
 
