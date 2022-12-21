@@ -27,14 +27,12 @@ def profile(request):
     """ profile page view """
     return render(request, 'profile.html')
 
-    
 def my_posts(request):
     """ authenticated user can view their own blogs """
 
-    logged_in_user = request.user
-    logged_in_user_posts = Post.objects.filter(author=logged_in_user)
+    author = get_object_or_404(Author, user=request.user)
+    logged_in_user_posts = list(Post.objects.filter(author=author))
     return render(request, 'my_posts.html', {'posts': logged_in_user_posts})
-
 
 def edit_post(request, post_id):
     """ users that are authenticated can edit their own post """

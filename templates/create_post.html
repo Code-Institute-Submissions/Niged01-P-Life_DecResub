@@ -9,6 +9,10 @@
     {% csrf_token %}    
     {{form|crispy}}
     <input type="submit" value="Save"  style="margin-block:50px;">
+    {% if updated %}
+    {{ message }}
 </form>
+
+{% endif %}
 
 {% endblock content %}

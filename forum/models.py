@@ -14,6 +14,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Author(models.Model):
+    """Author Model"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     fullname = models.CharField(max_length=40, blank=True)
     slug = slug = models.SlugField(max_length=400, unique=True, blank=True)
@@ -27,7 +28,6 @@ class Author(models.Model):
     @property
     def num_posts(self):
         return Post.objects.filter(user=self).count()
-    
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -102,7 +102,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
-    
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
@@ -113,11 +113,10 @@ class Post(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
-    
-    
 
 
 class Comment(models.Model):
+    """Comment Model"""
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)
