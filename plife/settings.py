@@ -30,9 +30,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
-#os.environ.get("DEBUG", "False") == True
+# os.environ.get("DEBUG", "False") == True
 
 ALLOWED_HOSTS = ["p-life-01.herokuapp.com", "localhost"]
 
@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'tinymce',
     'hitcount',
     'taggit',
-    
 ]
 
 SITE_ID = 1

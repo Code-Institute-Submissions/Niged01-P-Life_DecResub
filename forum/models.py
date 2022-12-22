@@ -12,7 +12,6 @@ from taggit.managers import TaggableManager
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-
 class Author(models.Model):
     """Author Model"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -20,7 +19,13 @@ class Author(models.Model):
     slug = slug = models.SlugField(max_length=400, unique=True, blank=True)
     bio = HTMLField()
     points = models.IntegerField(default=0)
-    profile_pic = ResizedImageField(size=[50, 80], quality=100, upload_to="authors", default=None, null=True, blank=True)
+    profile_pic = ResizedImageField(
+        size=[50, 80],
+        quality=100,
+        upload_to="authors",
+        default=None,
+        null=True,
+        blank=True)
 
     def __str__(self):
         return self.fullname
@@ -42,9 +47,9 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = "categories"
+
     def __str__(self):
         return self.title
-    
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -53,13 +58,13 @@ class Category(models.Model):
 
     def get_url(self):
         return reverse("posts", kwargs={
-            "slug":self.slug
+            "slug": self.slug
         })
 
     @property
     def num_posts(self):
         return Post.objects.filter(categories=self).count()
-    
+
     @property
     def last_post(self):
         return Post.objects.filter(categories=self).latest("date")
@@ -79,7 +84,13 @@ class Reply(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=400, unique=True, blank=True)
-    post_image = ResizedImageField(size=[50, 80], quality=100, upload_to="posts", default=None, null=True, blank=True)
+    post_image = ResizedImageField(
+        size=[50, 80],
+        quality=100,
+        upload_to="posts",
+        default=None,
+        null=True,
+        blank=True)
     slug = models.SlugField(max_length=400, unique=True, blank=True)
     author = models.ForeignKey(
         Author, on_delete=models.CASCADE, related_name="blog_posts"

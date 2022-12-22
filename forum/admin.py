@@ -7,6 +7,7 @@ admin.site.register(Category)
 admin.site.register(Author)
 admin.site.register(Reply)
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 

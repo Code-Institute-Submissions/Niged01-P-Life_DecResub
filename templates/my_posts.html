@@ -1,6 +1,6 @@
 <!--my blogs page-->
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <div class="container-fluid my-blogs-container">
@@ -8,10 +8,11 @@
 
     {% for post in posts %}
         <div class="card my-list">
+            print(post.approved)
             {% if post.approved %}
-            <h4 class="card-header status">Published <i class="fas fa-check"></i></h4>
+            <h4 class="card-header">Published <i class="fas fa-check"></i></h4>
             {% else %}
-            <h4 class="card-header status">Pending Approval</h4>
+            <h4 class="card-header">Pending Approval</h4>
             {% endif %}
             <div class="card-body my-list-box">
                 {% if post.approved %}

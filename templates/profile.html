@@ -1,6 +1,6 @@
 <!--profilepage-->
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <div class="container-fluid">
@@ -10,11 +10,11 @@
     </div>
 
     <div class="d-flex justify-content-center">
-        <ul class="ms-auto w-100">
-            <li class="profile-item">
+        <ul class="ms-auto w-100 profile-link">
+            <li class="profile-link">
                 <a class="btn btn-signup btn-lg profile-item-link" href="{% url 'create_post' %}">create your posts</a>
             </li>
-            <li class="profile-item">
+            <li class="profile-link">
                 <a class="btn btn-signup btn-lg profile-item-link" href="{% url 'my_posts' %}">Manage your posts</a>
             </li>
         </ul>

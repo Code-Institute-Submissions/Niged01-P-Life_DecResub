@@ -7,7 +7,7 @@ P-life is a forum that has been created for Pilots to get togehter and discuss e
 Being a pilot out on the road can get lonely, creating this community in theory should make it easier for 
 Pilots to get information easier and gain friendships along the way. It is a forum for newby Pilots and those more experienced.
 
-insert responsive image here later-----
+![Responsive](./assets/documentation/responsive.png)
 
 ## Contents 
 - [User Experience](#user-experience)
@@ -113,6 +113,12 @@ and came accross this palette that fits perfectly with what I had envisioned. I 
 - Throughout the site there is comments that is displayed so a user knows things have happened like logging out, or form submitted to admin.
 
 ![comment](./assets/documentation/approved2.png)
+
+- **Profile Management**
+- In this page the user is able to manage edit and delete their posts for CRUD development
+
+![profile](./assets/documentation/profilepage.png)
+![Manage](./assets/documentation/managepost.png)
 
 ### Future Features
 - The ability to sign in with social accounts like Facebook, Google etc.

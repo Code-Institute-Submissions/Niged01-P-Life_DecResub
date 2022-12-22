@@ -7,6 +7,7 @@ from django.contrib.auth import logout as lt
 from django.contrib import messages
 from django.contrib.auth.models import User
 
+
 def signup(request):
     context = {}
     form = UserCreationForm(request.POST or None)
@@ -16,10 +17,11 @@ def signup(request):
             login(request, new_user)
             return redirect("update_profile")
     context.update({
-        "form":form, 
+        "form": form,
         "title": "Signup",
     })
     return render(request, "register/signup.html", context)
+
 
 def signin(request):
     context = {}
@@ -38,10 +40,11 @@ def signin(request):
     })
     return render(request, "register/signin.html", context)
 
+
 @login_required
 def update_profile(request):
     context = {}
-    user = request.user 
+    user = request.user
     form = UpdateForm(request.POST, request.FILES)
     if request.method == "POST":
         if form.is_valid():
@@ -55,6 +58,7 @@ def update_profile(request):
         "title": "Update Profile",
     })
     return render(request, "register/update.html", context)
+
 
 @login_required
 def logout(request):

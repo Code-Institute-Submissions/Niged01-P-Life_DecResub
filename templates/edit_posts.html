@@ -1,11 +1,11 @@
 <!--edit-blog page-->
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 {% load crispy_forms_tags %}
 
-<div class="container-fluid publish-form-container">
+<div class="container-fluid edit-form-container">
 
     {% if user.is_authenticated %}
     <h3 class="title">Edit Post</h3>
@@ -13,7 +13,7 @@
     <form method="POST">
         {{ post_form | crispy }}
         {% csrf_token %}
-        <button type="submit" class="btn btn-signup btn-lg">Update Post</button>
+        <button type="submit" class="btn btn-signup btn-lg update-post-btn">Update Post</button>
         {% if updated %}
         {{ message }}
     </form>

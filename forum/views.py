@@ -9,7 +9,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 
-
 def index(request):
     """ home page view """
 
@@ -27,12 +26,14 @@ def profile(request):
     """ profile page view """
     return render(request, 'profile.html')
 
+
 def my_posts(request):
     """ authenticated user can view their own blogs """
 
     author = get_object_or_404(Author, user=request.user)
     logged_in_user_posts = list(Post.objects.filter(author=author))
     return render(request, 'my_posts.html', {'posts': logged_in_user_posts})
+
 
 def edit_post(request, post_id):
     """ users that are authenticated can edit their own post """
@@ -52,7 +53,7 @@ def edit_post(request, post_id):
     context = {'post_form': post_form}
     return render(request, 'edit_posts.html', context)
 
-   
+
 def delete_post(request, post_id):
     """ Authenticated users can delete their own posts"""
     post = get_object_or_404(Post, id=post_id)
@@ -82,7 +83,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -101,7 +102,7 @@ class PostDetail(View):
             comment.save()
         else:
             comment_form = CommentForm()
-        
+
         update_views(request, post)
 
         return render(
@@ -117,9 +118,8 @@ class PostDetail(View):
         )
 
 
-
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -128,6 +128,7 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 @login_required
 def create_post(request):
@@ -141,6 +142,10 @@ def create_post(request):
             new_post.author = author
             new_post.save()
             form.save_m2m()
+            messages.success(
+                request,
+                'Updated post has been successfully submitted for approval'
+            )
             return HttpResponseRedirect(reverse('home'))
     context.update({
         "form": form,
