@@ -77,24 +77,29 @@
 
 - Unit testing for forms
 
-![unit testing for forms](./assets/documentation/pep8form.png)
+![unit testing for forms](./assets/documentation/forms.png)
 
 - Unit testing for views
 
-![Unit testing for views](./assets/documentation/pep8views.png)
+![Unit testing for views](./assets/documentation/views.png)
 
 - forum app urls
 
-![blog app urls](./assets/documentation/pep8forumurls.png)
+![blog app urls](./assets/documentation/urls.png)
 
 - admin.py
 
-![admin.py pep8](./assets/documentation/pep8admin.png)
+![admin.py pep8](./assets/documentation/admin.png)
 
 - models.py
 
-![models.py pep8](./assets/documentation/pep8models.png)
+![models.py pep8](./assets/documentation/views2.png)
 
+- Register View
+
+![register](./assets/documentation/register.png)
+
+I have also Used the CI linter validator on the urls and settings there were a few lines and white spaces that needed to be sorted I have adjusted accordinly.
 
 ## User Story Testing
 

@@ -119,6 +119,7 @@ and came accross this palette that fits perfectly with what I had envisioned. I 
 
 ![profile](./assets/documentation/profilepage.png)
 ![Manage](./assets/documentation/managepost.png)
+![delete](./assets/documentation/delete.png)
 
 ### Future Features
 - The ability to sign in with social accounts like Facebook, Google etc.
